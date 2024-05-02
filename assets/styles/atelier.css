@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+body{
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(80, 42, 4));
+  height: 100vh;
+}
+
+.container{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    width: 100%; /* need to overwrite inline dimensions */
+    height: auto;
+  }
+
+  .container{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: .5em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+}
+  
+/* hover styles */
+  .choco-listing {
+    position: relative;
+}
+  
+.choco-image {
+    line-height: 0;
+    overflow: hidden;
+}
+  
+.choco-image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+}
+  
+.choco-titre {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background: rgba(90,0,10,0.4);
+    color: white;
+    cursor: default;
+    
+    /* position the text in t’ middle*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.choco-listing:hover .choco-titre {
+    opacity: 1;
+}
+  
+.chocon-listing:hover .choco-image img {
+    filter: blur(2px);
+}
